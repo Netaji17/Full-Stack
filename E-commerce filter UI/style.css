@@ -1,0 +1,182 @@
+/* =====================
+   GLOBAL STYLES
+===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background: #f1f3f6;
+    color: #2f3640;
+    line-height: 1.5;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    text-align: center;
+    padding: 28px 20px;
+}
+
+.header h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* =====================
+   MAIN LAYOUT
+===================== */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 25px;
+    padding: 0 20px;
+}
+
+/* =====================
+   FILTER PANEL
+===================== */
+.filters {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.filters h2 {
+    font-size: 20px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.filter-group {
+    margin-bottom: 24px;
+}
+
+.filter-group h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: #353b48;
+}
+
+/* Price Slider */
+input[type="range"] {
+    width: 100%;
+    accent-color: #273c75;
+}
+
+/* =====================
+   COLOR PALETTE
+===================== */
+.color-options {
+    display: flex;
+    gap: 12px;
+}
+
+.color {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #e1e1e1;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.color:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.08);
+}
+
+.red { background: #e84118; }
+.blue { background: #0097e6; }
+.black { background: #2f3640; }
+.green { background: #44bd32; }
+
+/* =====================
+   CHECKBOX / RADIO
+===================== */
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #273c75;
+}
+
+/* =====================
+   PRODUCTS GRID
+===================== */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+/* =====================
+   PRODUCT CARD
+===================== */
+.product-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.brand {
+    font-size: 13px;
+    color: #718093;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e84118;
+    margin: 10px 0;
+}
+
+.rating {
+    color: #fbc531;
+    font-size: 15px;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+    background: #2f3640;
+    color: #dcdde1;
+    text-align: center;
+    padding: 18px;
+    margin-top: 40px;
+    font-size: 14px;
+}

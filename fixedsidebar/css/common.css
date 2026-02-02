@@ -1,0 +1,10 @@
+header, nav, aside, main, section, article, footer {
+    padding: 15px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}

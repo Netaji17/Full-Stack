@@ -1,0 +1,15 @@
+body.fixed-sidebar-layout aside {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    background: #f4f4f4;
+}
+
+body.fixed-sidebar-layout main,
+body.fixed-sidebar-layout header,
+body.fixed-sidebar-layout nav,
+body.fixed-sidebar-layout footer {
+    margin-left: 240px;
+}

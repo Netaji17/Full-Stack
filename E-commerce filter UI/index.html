@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Filter UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>ShopSmart</h1>
+    <p>Advanced Product Filtering Interface</p>
+</header>
+
+<div class="container">
+
+    <!-- ===== FILTER PANEL ===== -->
+    <aside class="filters">
+        <h2>Filters</h2>
+
+        <!-- Price Range -->
+        <div class="filter-group">
+            <h3>Price Range</h3>
+            <input type="range" min="500" max="5000">
+            <p>₹500 – ₹5000</p>
+        </div>
+
+        <!-- Color Palette -->
+        <div class="filter-group">
+            <h3>Colors</h3>
+            <div class="color-options">
+                <span class="color red"></span>
+                <span class="color blue"></span>
+                <span class="color black"></span>
+                <span class="color green"></span>
+            </div>
+        </div>
+
+        <!-- Brand Selection -->
+        <div class="filter-group">
+            <h3>Brands</h3>
+            <label><input type="checkbox"> Nike</label>
+            <label><input type="checkbox"> Adidas</label>
+            <label><input type="checkbox"> Puma</label>
+            <label><input type="checkbox"> Reebok</label>
+        </div>
+
+        <!-- Ratings -->
+        <div class="filter-group">
+            <h3>Customer Ratings</h3>
+            <label><input type="radio" name="rating"> ★★★★☆ & above</label>
+            <label><input type="radio" name="rating"> ★★★☆☆ & above</label>
+            <label><input type="radio" name="rating"> ★★☆☆☆ & above</label>
+        </div>
+    </aside>
+
+    <!-- ===== PRODUCT LIST ===== -->
+    <main class="products">
+        <div class="product-card">
+            <h3>Running Shoes</h3>
+            <p class="brand">Nike</p>
+            <p class="price">₹2999</p>
+            <p class="rating">★★★★☆</p>
+        </div>
+
+        <div class="product-card">
+            <h3>Sports Sneakers</h3>
+            <p class="brand">Adidas</p>
+            <p class="price">₹3499</p>
+            <p class="rating">★★★★★</p>
+        </div>
+
+        <div class="product-card">
+            <h3>Casual Shoes</h3>
+            <p class="brand">Puma</p>
+            <p class="price">₹2499</p>
+            <p class="rating">★★★☆☆</p>
+        </div>
+    </main>
+
+</div>
+
+<footer class="footer">
+    <p>© 2026 ShopSmart E-Commerce</p>
+</footer>
+
+</body>
+</html>

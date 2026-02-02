@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+nav {
+    background: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main {
+    width: 70%;
+    float: left;
+    padding: 20px;
+}
+
+aside {
+    width: 25%;
+    float: right;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.blog-post {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.media-section {
+    margin: 20px 0;
+}
+
+.meta {
+    color: gray;
+    font-size: 14px;
+}
+
+footer {
+    clear: both;
+}
