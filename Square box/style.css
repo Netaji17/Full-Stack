@@ -1,0 +1,14 @@
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+#box {
+    width: 60px;
+    height: 60px;
+    background-color: dodgerblue;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
