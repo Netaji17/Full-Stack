@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tantraz Registration – Grid Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f2f5;
+      padding: 20px;
+    }
+
+    .wrapper {
+      max-width: 850px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    /* ---------- Grid System ---------- */
+    .grid-form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+      padding: 9px;
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    /* Full-width sections */
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    fieldset {
+      grid-column: 1 / -1;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    legend {
+      font-weight: bold;
+      padding: 0 8px;
+    }
+
+    .choices label {
+      font-weight: normal;
+      display: block;
+      margin-top: 5px;
+    }
+
+    button {
+      grid-column: 1 / -1;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #222f3e;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1e272e;
+    }
+
+    /* ---------- Media Queries ---------- */
+
+    /* Tablets */
+    @media (max-width: 768px) {
+      .grid-form {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Small Mobiles */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <h1>Tantraz Event Registration</h1>
+
+  <form class="grid-form">
+
+    <!-- Full Name -->
+    <div class="field">
+      <label for="name">Full Name *</label>
+      <input
+        type="text"
+        id="name"
+        placeholder="Your full name"
+        required
+      >
+    </div>
+
+    <!-- Email -->
+    <div class="field">
+      <label for="email">Email *</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="name@example.com"
+        required
+      >
+    </div>
+
+    <!-- Category -->
+    <div class="field full">
+      <label for="category">Participation Category *</label>
+      <select id="category" required>
+        <option value="">Select category</option>
+        <option>Individual</option>
+        <option>Team</option>
+        <option>Audience</option>
+      </select>
+    </div>
+
+    <!-- T-shirt Size -->
+    <fieldset>
+      <legend>T-Shirt Size</legend>
+      <div class="choices">
+        <label><input type="radio" name="size"> S</label>
+        <label><input type="radio" name="size"> M</label>
+        <label><input type="radio" name="size"> L</label>
+        <label><input type="radio" name="size"> XL</label>
+      </div>
+    </fieldset>
+
+    <!-- Technical Interests -->
+    <fieldset>
+      <legend>Technical Interests</legend>
+      <div class="choices">
+        <label><input type="checkbox"> AI</label>
+        <label><input type="checkbox"> Web Development</label>
+        <label><input type="checkbox"> Cloud Computing</label>
+      </div>
+    </fieldset>
+
+    <!-- Biography -->
+    <div class="field full">
+      <label for="bio">Expectations / Suggestions</label>
+      <textarea
+        id="bio"
+        rows="4"
+        maxlength="200"
+        placeholder="Write your expectations (maximum 200 characters)"
+      ></textarea>
+    </div>
+
+    <button type="submit">Submit Registration</button>
+
+  </form>
+</div>
+
+</body>
+</html>

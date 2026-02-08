@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accessible Auth Forms</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    form {
+      background: #ffffff;
+      padding: 25px;
+      width: 320px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 18px;
+      width: 100%;
+      padding: 10px;
+      background: #0066cc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #004999;
+    }
+
+    .error {
+      color: red;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔐 SIGN IN FORM -->
+  <form aria-labelledby="signin-title">
+    <h2 id="signin-title">Sign In</h2>
+
+    <label for="signin-email">Email</label>
+    <input
+      type="email"
+      id="signin-email"
+      name="email"
+      aria-label="Email address"
+      aria-required="true"
+      autocomplete="email"
+      required
+    />
+
+    <label for="signin-password">Password</label>
+    <input
+      type="password"
+      id="signin-password"
+      name="password"
+      aria-label="Password"
+      aria-required="true"
+      autocomplete="current-password"
+      required
+    />
+
+    <div id="signin-error" class="error" role="alert" aria-live="assertive"></div>
+
+    <button type="submit" aria-label="Sign in to your account">
+      Sign In
+    </button>
+  </form>
+
+  <!-- 📝 SIGN UP FORM -->
+  <form aria-labelledby="signup-title">
+    <h2 id="signup-title">Sign Up</h2>
+
+    <label for="signup-name">Full Name</label>
+    <input
+      type="text"
+      id="signup-name"
+      name="name"
+      aria-label="Full name"
+      aria-required="true"
+      autocomplete="name"
+      required
+    />
+
+    <label for="signup-email">Email</label>
+    <input
+      type="email"
+      id="signup-email"
+      name="email"
+      aria-label="Email address"
+      aria-required="true"
+      autocomplete="email"
+      required
+    />
+
+    <label for="signup-password">Password</label>
+    <input
+      type="password"
+      id="signup-password"
+      name="password"
+      aria-label="Create password"
+      aria-describedby="password-hint"
+      aria-required="true"
+      autocomplete="new-password"
+      required
+    />
+
+    <small id="password-hint">
+      Password must be at least 8 characters
+    </small>
+
+    <div id="signup-error" class="error" role="alert" aria-live="assertive"></div>
+
+    <button type="submit" aria-label="Create a new account">
+      Sign Up
+    </button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tantraz Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f4f7;
+      padding: 30px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    fieldset {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    .options {
+      margin-top: 8px;
+    }
+
+    .options label {
+      font-weight: normal;
+      display: block;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003f87;
+    }
+  </style>
+</head>
+
+<body>
+
+<form aria-labelledby="form-title">
+  <h2 id="form-title">Tantraz Registration Form</h2>
+
+  <!-- Full Name -->
+  <label for="fullname">Full Name</label>
+  <input
+    type="text"
+    id="fullname"
+    name="fullname"
+    aria-label="Full name"
+    required
+  />
+
+  <!-- Email -->
+  <label for="email">Email Address</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    aria-label="Email address"
+    autocomplete="email"
+    required
+  />
+
+  <!-- Participation Category -->
+  <label for="category">Participation Category</label>
+  <select
+    id="category"
+    name="category"
+    aria-label="Participation category"
+    required
+  >
+    <option value="">-- Select Category --</option>
+    <option value="individual">Individual</option>
+    <option value="team">Team</option>
+    <option value="audience">Audience</option>
+  </select>
+
+  <!-- T-shirt Size -->
+  <fieldset>
+    <legend>T-Shirt Size</legend>
+    <div class="options">
+      <label>
+        <input type="radio" name="tshirt" value="s" required /> Small (S)
+      </label>
+      <label>
+        <input type="radio" name="tshirt" value="m" /> Medium (M)
+      </label>
+      <label>
+        <input type="radio" name="tshirt" value="l" /> Large (L)
+      </label>
+      <label>
+        <input type="radio" name="tshirt" value="xl" /> Extra Large (XL)
+      </label>
+    </div>
+  </fieldset>
+
+  <!-- Technical Interests -->
+  <fieldset>
+    <legend>Technical Interests</legend>
+    <div class="options">
+      <label>
+        <input type="checkbox" name="interests" value="ai" /> Artificial Intelligence
+      </label>
+      <label>
+        <input type="checkbox" name="interests" value="web" /> Web Development
+      </label>
+      <label>
+        <input type="checkbox" name="interests" value="cloud" /> Cloud Computing
+      </label>
+    </div>
+  </fieldset>
+
+  <!-- Expectations / Suggestions -->
+  <label for="expectations">Expectations / Suggestions</label>
+  <textarea
+    id="expectations"
+    name="expectations"
+    rows="4"
+    aria-label="Expectations or suggestions"
+    placeholder="Share your expectations or suggestions..."
+  ></textarea>
+
+  <!-- Submit -->
+  <button type="submit" aria-label="Submit registration form">
+    Register
+  </button>
+
+</form>
+
+</body>
+</html>
